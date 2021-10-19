@@ -35,8 +35,8 @@ namespace StealthGame.View
             this._loadGameOption = new System.Windows.Forms.ToolStripMenuItem();
             this._saveGameOption = new System.Windows.Forms.ToolStripMenuItem();
             this._quitGameOption = new System.Windows.Forms.ToolStripMenuItem();
-            this._resumeGameOption = new System.Windows.Forms.ToolStripMenuItem();
             this._pauseGameOption = new System.Windows.Forms.ToolStripMenuItem();
+            this._resumeGameOption = new System.Windows.Forms.ToolStripMenuItem();
             this._helpOption = new System.Windows.Forms.ToolStripMenuItem();
             this._difficultyOption = new System.Windows.Forms.ToolStripMenuItem();
             this._easyOption = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +62,7 @@ namespace StealthGame.View
             this._mainMenu.Location = new System.Drawing.Point(0, 0);
             this._mainMenu.Name = "_mainMenu";
             this._mainMenu.Padding = new System.Windows.Forms.Padding(10);
-            this._mainMenu.Size = new System.Drawing.Size(884, 39);
+            this._mainMenu.Size = new System.Drawing.Size(808, 39);
             this._mainMenu.TabIndex = 0;
             this._mainMenu.Text = "Main Menu";
             // 
@@ -105,19 +105,19 @@ namespace StealthGame.View
             this._quitGameOption.Text = "Quit Game";
             this._quitGameOption.Click += new System.EventHandler(this.QuitGameOption_Click);
             // 
-            // _resumeGameOption
-            // 
-            this._resumeGameOption.Name = "_resumeGameOption";
-            this._resumeGameOption.Size = new System.Drawing.Size(61, 19);
-            this._resumeGameOption.Text = "Resume";
-            this._resumeGameOption.Click += new System.EventHandler(this.ResumeGameOption_Click);
-            // 
             // _pauseGameOption
             // 
             this._pauseGameOption.Name = "_pauseGameOption";
             this._pauseGameOption.Size = new System.Drawing.Size(50, 19);
             this._pauseGameOption.Text = "Pause";
             this._pauseGameOption.Click += new System.EventHandler(this.PauseGameOption_Click);
+            // 
+            // _resumeGameOption
+            // 
+            this._resumeGameOption.Name = "_resumeGameOption";
+            this._resumeGameOption.Size = new System.Drawing.Size(61, 19);
+            this._resumeGameOption.Text = "Resume";
+            this._resumeGameOption.Click += new System.EventHandler(this.ResumeGameOption_Click);
             // 
             // _helpOption
             // 
@@ -188,7 +188,7 @@ namespace StealthGame.View
             this.EasyTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.EasyTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.EasyTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.EasyTablePanel.Location = new System.Drawing.Point(32, 55);
+            this.EasyTablePanel.Location = new System.Drawing.Point(0, 39);
             this.EasyTablePanel.Margin = new System.Windows.Forms.Padding(0);
             this.EasyTablePanel.Name = "EasyTablePanel";
             this.EasyTablePanel.RowCount = 20;
@@ -248,7 +248,7 @@ namespace StealthGame.View
             this.MediumTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.MediumTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.MediumTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.MediumTablePanel.Location = new System.Drawing.Point(32, 55);
+            this.MediumTablePanel.Location = new System.Drawing.Point(0, 39);
             this.MediumTablePanel.Margin = new System.Windows.Forms.Padding(0);
             this.MediumTablePanel.Name = "MediumTablePanel";
             this.MediumTablePanel.RowCount = 30;
@@ -328,7 +328,7 @@ namespace StealthGame.View
             this.HardTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.HardTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.HardTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.HardTablePanel.Location = new System.Drawing.Point(32, 55);
+            this.HardTablePanel.Location = new System.Drawing.Point(0, 39);
             this.HardTablePanel.Margin = new System.Windows.Forms.Padding(0);
             this.HardTablePanel.Name = "HardTablePanel";
             this.HardTablePanel.RowCount = 40;
@@ -380,8 +380,10 @@ namespace StealthGame.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(884, 881);
+            this.ClientSize = new System.Drawing.Size(808, 846);
             this.Controls.Add(this.HardTablePanel);
             this.Controls.Add(this.MediumTablePanel);
             this.Controls.Add(this.EasyTablePanel);
