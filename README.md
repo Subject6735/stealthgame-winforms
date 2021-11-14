@@ -110,9 +110,13 @@ activated or deactivated during the game when certain menu functions are
 running.
 - The complete static structure of the program is shown in Figure 3.
 
+## Figure 2: Package diagram
+
+![Package diagram](./documentation/StealthGame_PackageDiagram.jpg)
+
 ## Figure 3: Class diagram
 
-![Class diagram](./documentation/StealthGame_ClassDiagram.jpg)
+![Class diagram](./documentation/StealthGame_ClassDiagram.png)
 
 ## Testing
 
