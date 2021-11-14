@@ -1,6 +1,6 @@
 # StealthGame_WinForms
-A Stealth Game desktop app made with Windows Forms.
-© ELTE Event-driven applications, 2021/2022 Autumn semester
+- A Stealth Game desktop app made with Windows Forms.
+- © ELTE Event-driven applications, 2021/2022 Autumn semester
 
 # Task documentation
 
@@ -53,12 +53,15 @@ displayed when exiting the game to see if the user is sure they want to exit the
 
 ## Planning
 
-1. Programme structure
+### Programme structure
+
 - The programme is implemented in a three-tier architecture. The
 representation is in the View namespace, the model in the Model
 namespace, and the persistence in the Persistence namespace. The
 package structure of the program is shown in Figure 2.
-2. Persistence
+
+### Persistence
+
 - Data management is responsible for storing information about the
 StealthGame board and ensuring that it is loaded/saved.
 - The StealthGameTable class provides a valid StealthGame table (i.e. it
@@ -77,7 +80,9 @@ the StealthGameDataException exception.
 can be loaded into the program at any time and the current status can be saved.
 - The first row of the file specifies the size of the table, the other rows and
 columns of the file store the values of the table as a "matrix" of letters.
-3. Model
+
+### Model
+
 - The core of the model is implemented by the StealthGameModel class,
 which controls the board's activities, as well as other parameters of the game:
 _detected (whether the player has been detected) and _exitReached
@@ -94,7 +99,9 @@ interface that allows you to load (LoadGameAsync) and save
 - The game difficulty is handled through the GameDifficulty enumeration
 type, and the table sizes for each difficulty are stored in the
 StealthGameTable class using read-only variables.
-4. View
+
+### View
+
 - The view is provided by the StealthGameForm class, which stores an
 instance of the model (_model) and a specific instance of the data access
 (_dataAccess).
@@ -123,7 +130,7 @@ running.
 1. The functionality of the model has been verified by unit tests within the
 StealthGameTest project in the StealthGameModellTest class, using the
 MSTest environment.
-2. The following test cases have been implemented:
+1. The following test cases have been implemented:
 - Model_NewGameEasyTest, Model_NewGameMediumTest,
 Model_NewGameHardTest: Start a new game depending on the difficulty,
 check the difficulty and the size of the boards.
