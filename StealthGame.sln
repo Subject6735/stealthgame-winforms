@@ -5,7 +5,15 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StealthGame", "StealthGame\StealthGame.csproj", "{FA242B8E-F5BF-49E3-B36C-454388942C2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StealthGameTest", "StealthGameTest\StealthGameTest.csproj", "{8F9ED1BE-7BDE-4896-BB47-1EEBD50546C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StealthGameTest", "StealthGameTest\StealthGameTest.csproj", "{8F9ED1BE-7BDE-4896-BB47-1EEBD50546C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentation", "documentation", "{FA9DC8C7-1AB8-464D-84C6-5F397C4ED0C6}"
+	ProjectSection(SolutionItems) = preProject
+		documentation\README.md = documentation\README.md
+		documentation\StealthGame_ClassDiagram.png = documentation\StealthGame_ClassDiagram.png
+		documentation\StealthGame_PackageDiagram.jpg = documentation\StealthGame_PackageDiagram.jpg
+		documentation\StealthGame_UseCaseDiagram.jpg = documentation\StealthGame_UseCaseDiagram.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
