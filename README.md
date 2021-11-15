@@ -128,18 +128,18 @@ running.
 ## Testing
 
 1. The functionality of the model has been verified by unit tests within the
-StealthGameTest project in the StealthGameModellTest class, using the
-MSTest environment.
+`StealthGameTest` project in the `StealthGameModellTest` class, using the
+`MSTest` environment.
 1. The following test cases have been implemented:
-- Model_NewGameEasyTest, Model_NewGameMediumTest,
-Model_NewGameHardTest: Start a new game depending on the difficulty,
+- `Model_NewGameEasyTest`, `Model_NewGameMediumTest`,
+`Model_NewGameHardTest`: Start a new game depending on the difficulty,
 check the difficulty and the size of the boards.
-- Model_PlayerMoveTest: Check the player's move.
-- Model_PlayerReachedExit: checks if the player has reached the exit and
+- `Model_PlayerMoveTest`: Check the player's move.
+- `Model_PlayerReachedExit`: checks if the player has reached the exit and
 the game is over.
-- Model_PlayerDetectedByPlayerMove: checks if the player has entered
+- `Model_PlayerDetectedByPlayerMove`: checks if the player has entered
 the guards' line of sight, if the game is over.
-- Model_PlayerDetectedByGuardMove: check if the guards' vision screen
+- `Model_PlayerDetectedByGuardMove`: check if the guards' vision screen
 has entered the player, if the game is over. At the same time, the guards' move
 is checked.
-- Model_LoadTest: Test the loading of the game model with a mocked perperformance layer.
+- `Model_LoadTest`: Test the loading of the game model with a mocked perperformance layer.
