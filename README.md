@@ -56,63 +56,63 @@ displayed when exiting the game to see if the user is sure they want to exit the
 ### Programme structure
 
 - The programme is implemented in a three-tier architecture. The
-representation is in the View namespace, the model in the Model
-namespace, and the persistence in the Persistence namespace. The
+representation is in the `View` namespace, the model in the `Model`
+namespace, and the persistence in the `Persistence` namespace. The
 package structure of the program is shown in Figure 2.
 
 ### Persistence
 
 - Data management is responsible for storing information about the
-StealthGame board and ensuring that it is loaded/saved.
-- The StealthGameTable class provides a valid StealthGame table (i.e. it
+`StealthGame` board and ensuring that it is loaded/saved.
+- The `StealthGameTable` class provides a valid `StealthGame` table (i.e. it
 always checks the set values), where the value of each field is known. The table
-provides the ability to retrieve and set values (GetValue and SetValue),
-retrieve player coordinates (GetPlayerCoords), and check values
-(IsPlayer, IsExit, IsGuard, IsVision, IsVisionPlayer, IsWall,
-IsFloor, IsValidField).
-- Long-term data storage is provided by the IStealthGameDataAccess
-interface, which allows you to load (LoadAsync) and save (SaveAsync) the
+provides the ability to retrieve and set values (`GetValue` and `SetValue`),
+retrieve player coordinates (`GetPlayerCoords`), and check values
+(`IsPlayer`, `IsExit`, `IsGuard`, `IsVision`, `IsVisionPlayer`, `IsWall`,
+`IsFloor`, `IsValidField`).
+- Long-term data storage is provided by the `IStealthGameDataAccess`
+interface, which allows you to load (`LoadAsync`) and save (`SaveAsync`) the
 table. The operations are implemented asynchronously for efficiency reasons.
 - The interface for text file-based data management is implemented by the
-StealthGameFileDataAccess class. Errors in file handling are indicated by
-the StealthGameDataException exception.
-- The program can store the data as text files with the extension stga. This data
+`StealthGameFileDataAccess` class. Errors in file handling are indicated by
+the `StealthGameDataException` exception.
+- The program can store the data as text files with the extension `.stga`. This data
 can be loaded into the program at any time and the current status can be saved.
 - The first row of the file specifies the size of the table, the other rows and
 columns of the file store the values of the table as a "matrix" of letters.
 
 ### Model
 
-- The core of the model is implemented by the StealthGameModel class,
+- The core of the model is implemented by the `StealthGameModel` class,
 which controls the board's activities, as well as other parameters of the game:
-_detected (whether the player has been detected) and _exitReached
+`_detected` (whether the player has been detected) and `_exitReached`
 (whether the player has reached the exit). The type provides the possibility to
-start a new game (NewGame) and to move (MovePlayer). Before selecting a
+start a new game (`NewGame`) and to move (`MovePlayer`). Before selecting a
 new game, the difficulty level must be entered, and the table is generated
-based on this. You can move the guards by advancing the time (MoveGuards).
-- PlayerDetected and PlayerReachedExit events inform you about the
-end of the game. The argument of the events (StealthGameEventArgs)
+based on this. You can move the guards by advancing the time (`MoveGuards`).
+- `PlayerDetected` and `PlayerReachedExit` events inform you about the
+end of the game. The argument of the events (`StealthGameEventArgs`)
 stores the state of the game.
 - When the model is instantiated, it is provided with a data management
-interface that allows you to load (LoadGameAsync) and save
-(SaveGameAsync).
-- The game difficulty is handled through the GameDifficulty enumeration
+interface that allows you to load (`LoadGameAsync`) and save
+(`SaveGameAsync`).
+- The game difficulty is handled through the `GameDifficulty` enumeration
 type, and the table sizes for each difficulty are stored in the
-StealthGameTable class using read-only variables.
+`StealthGameTable` class using read-only variables.
 
 ### View
 
-- The view is provided by the StealthGameForm class, which stores an
-instance of the model (_model) and a specific instance of the data access
-(_dataAccess).
-- The game board is represented by a button grid (_buttonGrid). For efficiency
-reasons, all three difficulty tables are generated into a TableLayoutPanel
+- The view is provided by the `StealthGameForm` class, which stores an
+instance of the model (`_model`) and a specific instance of the data access
+(`_dataAccess`).
+- The game board is represented by a button grid (`_buttonGrid`). For efficiency
+reasons, all three difficulty tables are generated into a `TableLayoutPanel`
 when the game is loaded, and are hidden/shown when changing the maps. In
 the interface we create the corresponding menu items or dialog boxes and
 their corresponding event handlers. Separate methods are used to generate
-(GenerateTables), set (SetupTable) and update (RefreshGuards,
-RefreshVisionCone) the game tables.
-- The game timer (_timer), which is used to move the guards, is always
+(`GenerateTables`), set (`SetupTable`) and update (`RefreshGuards`,
+`RefreshVisionCone`) the game tables.
+- The game timer (`_timer`), which is used to move the guards, is always
 activated or deactivated during the game when certain menu functions are
 running.
 - The complete static structure of the program is shown in Figure 3.
