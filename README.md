@@ -47,7 +47,7 @@ player has been spotted by the guards or has escaped). Also dialog windows are u
 to perform saving or loading (file names are given by the user) and a dialog window is
 displayed when exiting the game to see if the user is sure they want to exit the game.
 
-## Figure 2: Use cases
+## Use cases
 
 ![Use case diagram](./documentation/StealthGame_UseCaseDiagram.jpg)
 
@@ -57,8 +57,7 @@ displayed when exiting the game to see if the user is sure they want to exit the
 
 - The programme is implemented in a three-tier architecture. The
 representation is in the `View` namespace, the model in the `Model`
-namespace, and the persistence in the `Persistence` namespace. The
-package structure of the program is shown in Figure 2.
+namespace, and the persistence in the `Persistence` namespace.
 
 ### Persistence
 
@@ -115,13 +114,12 @@ their corresponding event handlers. Separate methods are used to generate
 - The game timer (`_timer`), which is used to move the guards, is always
 activated or deactivated during the game when certain menu functions are
 running.
-- The complete static structure of the program is shown in Figure 3.
 
-## Figure 2: Package diagram
+## Package diagram
 
 ![Package diagram](./documentation/StealthGame_PackageDiagram.jpg)
 
-## Figure 3: Class diagram
+## Class diagram
 
 ![Class diagram](./documentation/StealthGame_ClassDiagram.png)
 
