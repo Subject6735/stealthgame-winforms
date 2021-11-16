@@ -140,4 +140,4 @@ the guards' line of sight, if the game is over.
 - `Model_PlayerDetectedByGuardMove`: check if the guards' vision screen
 has entered the player, if the game is over. At the same time, the guards' move
 is checked.
-- `Model_LoadTest`: Test the loading of the game model with a mocked perperformance layer.
+- `Model_LoadTest`: Test the loading of the game model with a mocked persistence layer.
